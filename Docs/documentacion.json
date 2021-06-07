@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "70aa126c-728b-4209-8642-350ff1afa673",
+		"name": "Reposteria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Postres",
+			"item": [
+				{
+					"name": "/postres",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\": \"Tiramizu\",\"porcion\": \"Personal\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/postres",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"postres"
+							]
+						},
+						"description": "Endpoint para crear nuevos postres"
+					},
+					"response": []
+				},
+				{
+					"name": "/postres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/postres",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"postres"
+							]
+						},
+						"description": "Endpoint que devuelve todos los postres"
+					},
+					"response": []
+				},
+				{
+					"name": "/postres/<id>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/postres/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"postres",
+								"1"
+							]
+						},
+						"description": "Endpoint que devuelve el id solicitado."
+					},
+					"response": []
+				},
+				{
+					"name": "/postres/<id>",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\": \"Tiramizu\",\"porcion\": \"Familiar\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/postres/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"postres",
+								"1"
+							]
+						},
+						"description": "Metodo de actualizacion por el id"
+					},
+					"response": []
+				},
+				{
+					"name": "/postres/<id>",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/postres/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"postres",
+								"2"
+							]
+						},
+						"description": "Metodo para eliminar un postre"
+					},
+					"response": []
+				},
+				{
+					"name": "/busqueda_postre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/busqueda_postre?nombre=Tacacho&porcion=Personal",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"busqueda_postre"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Tacacho"
+								},
+								{
+									"key": "porcion",
+									"value": "Personal"
+								}
+							]
+						},
+						"description": "Busqueda con los parametros 'nombre' y 'porcion'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Preparacion",
+			"item": [
+				{
+					"name": "/preparaciones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"orden\":6,\"descripcion\":\"Medir los ingredientes y tenerlos listos\",\"postre_id\":7}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/preparaciones",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"preparaciones"
+							]
+						},
+						"description": "Endpoint para crear una preparacion"
+					},
+					"response": []
+				},
+				{
+					"name": "/preparaciones/<int:id>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/preparaciones/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"preparaciones",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ingredientes",
+			"item": [
+				{
+					"name": "/ingredientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\":\"harina\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/ingredientes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"ingredientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ingredientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ingredientes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ingredientes"
+							]
+						},
+						"description": "Endpoint que devuelve todos los ingredientes."
+					},
+					"response": []
+				},
+				{
+					"name": "/ingrediente/<int:id>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ingrediente/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ingrediente",
+								"1"
+							]
+						},
+						"description": "Endpoint que devuelve el ingrediente por el id."
+					},
+					"response": []
+				},
+				{
+					"name": "/ingrediente/<int:id>",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\":\"Harina Preparada\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ingrediente/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ingrediente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "127.0.0.1:5000"
+		}
+	]
+}
