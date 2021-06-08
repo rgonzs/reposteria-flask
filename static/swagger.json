@@ -9,7 +9,7 @@
       "name": "Renato Gonzales"
     }
   },
-  "host": "127.0.0.1:5000",
+  "host": "reposteria-flask-renato-gonzal.herokuapp.com",
   "basePath": "/",
   "schemes": [
     "https"
